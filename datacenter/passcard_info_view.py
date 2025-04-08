@@ -5,8 +5,11 @@ from datacenter.duration import get_duration, format_duration
 from datetime import timedelta
 
 
+MINUTES_IN_HOUR = 60
+
+
 def is_visit_long(duration):
-    return duration > timedelta(minutes=60)
+    return duration > timedelta(minutes=MINUTES_IN_HOUR)
 
 
 def passcard_info_view(request, passcode):
